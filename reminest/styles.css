@@ -1,11 +1,47 @@
 body{
-    background-color: #F8E6CB;
+    background-color: #AED8F2;
     font-family: Montserrat, sans-serif;
+    
+  
 }
+
+.log{
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+}
+
 
 #title {
     font-size: 4rem;
     font-weight: bold;
     text-align: left;
 }
+
+#emotions{
+    background-color:#F2C4DE;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    border-radius: 5px;
+
+    
+}
+
+
+svg{
+    position: relative;
+    top: 10px;
+    left: 10px
+}
+
+
+.monthly-log{
+    background-color: #F2C4DE;
+    border-radius: 5px;
+    position:relative;
+    top: 10px;
+    
+
+}
+
 
