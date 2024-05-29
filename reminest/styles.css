@@ -1,0 +1,11 @@
+body{
+    background-color: #F8E6CB;
+    font-family: Montserrat, sans-serif;
+}
+
+#title {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+}
+
