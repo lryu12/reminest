@@ -1,6 +1,7 @@
 body{
     background-color: #AED8F2;
     font-family: Montserrat, sans-serif;
+    color: #1c4966;
   
 }
 
@@ -13,20 +14,20 @@ body{
 }
 
 #nest-title{
-    color: #71B1D9;
+    color: #FFF9D0;
 }
 
 .log{
     margin-top: 150px;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     align-items: center;
 }
 
 
 #emotions{
-    background-color:#71B1D9;
+    background-color:#FFF9D0;
     display: flex;
     justify-content: center;
     width: 300px;
@@ -43,21 +44,34 @@ svg{
 }
 
 .journal-box{
-    background-color: #71B1D9;
-    width: 280px;
+    background-color: #FFF9D0;
+    height: 175px;
+    display:flex;
+    flex-wrap: no-wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 240px;
     border-radius: 5px;
-    padding: 10px;
+    padding: 30px;
     margin-left: 30px;
     
 }
 
 
+
+
 .monthly-log{
-    background-color: #71B1D9; 
-    width: 200px;
-    height: 305px;
-    padding: 0 10px;
+    background-color: #FFF9D0;
+    width: 160px;
+    height: 260px;
+    padding: 30px;
+    padding-top: 15px;
     border-radius: 5px;
+}
+
+.monthly-log > h1 {
+    position: relative;
+    left: 5px;
 }
 
 #prev-buttons{
@@ -71,14 +85,17 @@ svg{
 
 .prev-emotions{
     width: 150px;
-    border: 0;
+    border: 1;
+    background-color: white;
 }
 
 .daily-log{
     
 }
 
-
+.textbox{
+    margin-top: -15px;
+}
 .nav-bar{
     position:absolute;
     right: 40px;
@@ -86,6 +103,15 @@ svg{
     display: flex;
     flex-direction: row;
     gap: 10px;
+}
+
+.nav-bar > a{
+    background-color: #1c4966;
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
 
