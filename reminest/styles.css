@@ -1,7 +1,7 @@
 body{
     background-color: #AED8F2;
     font-family: Montserrat, sans-serif;
-    color: #1c4966;
+    color: #FFF9D0;
   
 }
 
@@ -27,7 +27,7 @@ body{
 
 
 #emotions{
-    background-color:#FFF9D0;
+    background-color:#1c4966;
     display: flex;
     justify-content: center;
     width: 300px;
@@ -39,12 +39,13 @@ body{
 
 svg{
     position: relative;
+    color: #FFF9D0;
     top: 10px;
     left: 10px
 }
 
 .journal-box{
-    background-color: #FFF9D0;
+    background-color: #1c4966;
     height: 175px;
     display:flex;
     flex-wrap: no-wrap;
@@ -57,11 +58,18 @@ svg{
     
 }
 
+.textbox{
+    background-color: #1c4966;
+    color: white;
+    border-color: white;
+    border-width: 2px;
+    border-radius: 5px;
+}
 
 
 
 .monthly-log{
-    background-color: #FFF9D0;
+    background-color: #1c4966;
     width: 160px;
     height: 260px;
     padding: 30px;
@@ -70,6 +78,7 @@ svg{
 }
 
 .monthly-log > h1 {
+    color: #FFF9D0;
     position: relative;
     left: 5px;
 }
@@ -80,13 +89,15 @@ svg{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
 }
 
 .prev-emotions{
     width: 150px;
     border: 1;
-    background-color: white;
+    background-color: #1c4966;
+    color: white;
+    border-radius: 10px;
 }
 
 .daily-log{
