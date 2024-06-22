@@ -8,13 +8,14 @@ body{
 #title {
     color: #1c4966;
     font-size: 80px;
-    font-weight: bold;
+    font-weight: 500;
     text-align: left;
     margin-left: 30px;
 }
 
 #nest-title{
     color: #FFF9D0;
+    font-weight: bold;
 }
 
 .log{
@@ -98,10 +99,6 @@ svg{
     background-color: #1c4966;
     color: white;
     border-radius: 10px;
-}
-
-.daily-log{
-    
 }
 
 .textbox{
