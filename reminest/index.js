@@ -13,7 +13,7 @@ for (var i = 0; i < svgLength; i++) {
     var emoji = document.querySelectorAll("svg")[i];
 
     emoji.addEventListener("mouseenter", function () {
-        this.style.color = "white";
+        this.style.color = "skyblue";
     })
     
     emoji.addEventListener("mouseleave", function () {
