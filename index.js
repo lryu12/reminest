@@ -1,4 +1,10 @@
+import express from "express";
+const app = express();
+const port = 3000;
 
+app.listen(port, function() {
+    console.log(`server running on port ${port}`);
+})
 
 
 // for (var i = 0; i<3; i++) {
@@ -9,35 +15,35 @@
 // }
 
 
-svgLength = document.querySelectorAll("svg").length;
-for (var i = 0; i < svgLength; i++) {
-    var emoji = document.querySelectorAll("svg")[i];
+// var svgLength = document.querySelectorAll("svg").length;
+// for (var i = 0; i < svgLength; i++) {
+//     var emoji = document.querySelectorAll("svg")[i];
 
-    emoji.addEventListener("mouseenter", function () {
+//     emoji.addEventListener("mouseenter", function () {
         
-        if (!this.classList.contains("clicked")) {
-            this.style.color = "skyblue";
-        }
-    })
+//         if (!this.classList.contains("clicked")) {
+//             this.style.color = "skyblue";
+//         }
+//     })
     
-    emoji.addEventListener("mouseleave", function () {
-        if (!this.classList.contains("clicked")) {
-            this.style.color = "#FFF9D0";
-        } 
-    })
+//     emoji.addEventListener("mouseleave", function () {
+//         if (!this.classList.contains("clicked")) {
+//             this.style.color = "#FFF9D0";
+//         } 
+//     })
 
-    emoji.addEventListener("click", function() {
-        this.classList.toggle('clicked');
-        if (this.classList.contains('clicked')) {
-            for (var i = 0; i < svgLength; i++) {
-                if ($("svg")[i] != this && $("svg")[i].classList.contains("clicked")) {
-                    $("svg")[i].classList.remove("clicked");
-                }
-            }            
+//     emoji.addEventListener("click", function() {
+//         this.classList.toggle('clicked');
+//         if (this.classList.contains('clicked')) {
+//             for (var i = 0; i < svgLength; i++) {
+//                 if ($("svg")[i] != this && $("svg")[i].classList.contains("clicked")) {
+//                     $("svg")[i].classList.remove("clicked");
+//                 }
+//             }            
             
-        }
-    });
-}
+//         }
+//     });
+// }
 
 
 
