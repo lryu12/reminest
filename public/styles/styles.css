@@ -49,10 +49,6 @@ svg{
     left: 10px
 }
 
-.clicked{
-    color: red;
-}
-
 .journal-box{
     background-color: #1c4966;
     height: 175px;
@@ -67,11 +63,6 @@ svg{
     
 }
 
-.submit-button{
-    margin-top: 12px;
-    margin-left: 100px;
-    width: 50px;
-}
 
 .textbox{
     background-color: #1c4966;
@@ -134,6 +125,15 @@ svg{
     padding: 5px;
     border-radius: 5px;
     text-decoration: none;
+}
+
+.emoji-icon {
+    cursor: pointer;
+}
+
+
+.emoji-icon.selected {
+    color: blue;
 }
 
 

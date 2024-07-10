@@ -1,49 +1,24 @@
 import express from "express";
+import { dirname, join } from "path";
+import { fileURLToPath } from "url";
 const app = express();
 const port = 3000;
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
-app.listen(port, function() {
+
+
+// Serve static files from the "public" directory
+app.use(express.static(join(__dirname, '/public')));
+
+app.listen(port, () => {
     console.log(`server running on port ${port}`);
-})
+});
+
+app.get("/", (req, res) => {
+    res.render("index.ejs");
+});
 
 
-// for (var i = 0; i<3; i++) {
-//     document.querySelectorAll(".prev-emotions")[i].addEventListener("click", handleClick);
-// }
-// function handleClick() {
-//     alert("I got clicked!");
-// }
-
-
-// var svgLength = document.querySelectorAll("svg").length;
-// for (var i = 0; i < svgLength; i++) {
-//     var emoji = document.querySelectorAll("svg")[i];
-
-//     emoji.addEventListener("mouseenter", function () {
-        
-//         if (!this.classList.contains("clicked")) {
-//             this.style.color = "skyblue";
-//         }
-//     })
-    
-//     emoji.addEventListener("mouseleave", function () {
-//         if (!this.classList.contains("clicked")) {
-//             this.style.color = "#FFF9D0";
-//         } 
-//     })
-
-//     emoji.addEventListener("click", function() {
-//         this.classList.toggle('clicked');
-//         if (this.classList.contains('clicked')) {
-//             for (var i = 0; i < svgLength; i++) {
-//                 if ($("svg")[i] != this && $("svg")[i].classList.contains("clicked")) {
-//                     $("svg")[i].classList.remove("clicked");
-//                 }
-//             }            
-            
-//         }
-//     });
-// }
 
 
 
@@ -52,11 +27,6 @@ app.listen(port, function() {
 
 // function for submitting daily log
 // every part has to be filled or error message pops out
-
-// document.querySelector(".submit-button").addEventListener("click", function() {
-//     if ()
-// })
-
 
 
 
