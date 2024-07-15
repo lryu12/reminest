@@ -8,7 +8,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 
 // Serve static files from the "public" directory
-app.use(express.static(join(__dirname, '/public')));
+app.use(express.static('public'));
 
 app.listen(port, () => {
     console.log(`server running on port ${port}`);
@@ -17,6 +17,15 @@ app.listen(port, () => {
 app.get("/", (req, res) => {
     res.render("index.ejs");
 });
+app.get("/goals2achieve", (req, res) => {
+    res.render("goals2achieve.ejs");
+});
+
+app.get("/past-emotions", (req, res) => {
+    res.render("past-emotions.ejs");
+});
+
+
 
 
 
