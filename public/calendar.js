@@ -56,3 +56,26 @@ updateMonthTitle(currentDate.getFullYear(), currentDate.getMonth());
 
 // You can call this function whenever you need to update the month title, 
 // passing in the desired year and month.
+
+let currentPageMonth = currentDate.getMonth();
+let currentPageYear = currentDate.getFullYear();
+
+document.querySelector('#back-button').addEventListener("click", () => {
+    currentPageMonth--;
+    if (currentPageMonth < 1) {
+        currentPageYear--;
+        currentPageMonth = 12;
+    }
+    generateCalendar(currentPageYear, currentPageMonth);
+    updateMonthTitle(currentPageYear, currentPageMonth);
+});
+
+document.querySelector('#next-button').addEventListener("click", () => {
+    currentPageMonth++;
+    if (currentPageMonth > 12) {
+        currentPageYear++;
+        currentPageMonth = 1;
+    }
+    generateCalendar(currentPageYear, currentPageMonth);
+    updateMonthTitle(currentPageYear, currentPageMonth);
+});
