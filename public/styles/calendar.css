@@ -1,0 +1,55 @@
+.calendar-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for days of the week */
+    gap: 5px; /* Gap between grid items */
+    width: 500px;
+    height: 500px;
+    
+}
+
+
+.day {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    background-color: #1c4966;
+}
+
+.header {
+    background-color: #FFF9D0;
+    color: #1c4966;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    
+
+}
+.today {
+    background-color: #0c52af;
+}
+
+.monthTitle {
+    color: #1c4966;
+    font-size: 50px;
+}
+
+.prevandnext{
+    font-weight: bolder;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.leftright{
+    height: 30px;
+}

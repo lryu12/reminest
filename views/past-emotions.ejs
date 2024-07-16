@@ -1,4 +1,22 @@
 <%- include ("partials/header.ejs") %>
 <body>
-    <script src="calendar.js"></script>
+    
+    <div class="calendar-body">
+        
+        <div class="prevandnext">
+            <button class="leftright"><<</button>
+            <div class="monthTitle">
+                
+            </div>
+            <button class="leftright">>></button>
+        </div>
+        <div class="calendar" id="calendar">
+            <!-- Calendar days will be generated dynamically here -->
+    
+        </div>
+        
+    </div>
+
+    <script src="calendar.js"></script> <!-- JavaScript file for calendar logic -->
+
 </body>
