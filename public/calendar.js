@@ -61,20 +61,23 @@ let currentPageMonth = currentDate.getMonth();
 let currentPageYear = currentDate.getFullYear();
 
 document.querySelector('#back-button').addEventListener("click", () => {
-    currentPageMonth--;
-    if (currentPageMonth < 1) {
+    if (currentPageMonth - 1 < 0) {
         currentPageYear--;
-        currentPageMonth = 12;
+        currentPageMonth = 11;
+    } else {
+        currentPageMonth--;
     }
     generateCalendar(currentPageYear, currentPageMonth);
     updateMonthTitle(currentPageYear, currentPageMonth);
+
 });
 
 document.querySelector('#next-button').addEventListener("click", () => {
-    currentPageMonth++;
-    if (currentPageMonth > 12) {
+    if (currentPageMonth + 1 > 11) {
         currentPageYear++;
-        currentPageMonth = 1;
+        currentPageMonth = 0;
+    } else {
+        currentPageMonth++;
     }
     generateCalendar(currentPageYear, currentPageMonth);
     updateMonthTitle(currentPageYear, currentPageMonth);
