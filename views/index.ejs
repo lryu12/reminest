@@ -4,7 +4,7 @@
 
     <div class="log">
     
-        <form action="" method="get" class = "daily-log box">
+        <form method="post" action="/submit" class = "daily-log box">
             
             <div id="emotions">
                 
@@ -29,13 +29,14 @@
 
                 
             </div>
-
+            
             <div class="journal-box">
                 <label for="key-moments">Key Moments:</label>
-                <input type="text" name="key-moments" placeholder="Snowboarding at Whistler" required>
+                <input type="text" id="key-moments" name="key-moments" placeholder="Snowboarding at Whistler" required>
                 <label for="new-goals">New Goals:</label>
-                <input type="text" name="new-goals" placeholder="Do a backflip on a snowboard" required>
+                <input type="text" id="new-goals" name="new-goals" placeholder="Do a backflip on a snowboard" required>
                 <input type="submit" value="Submit!"/>
+            
             </div>
             
         </form>
