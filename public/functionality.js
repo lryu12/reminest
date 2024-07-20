@@ -13,6 +13,8 @@
 
                 // Update selectedSVG variable
                 selectedSVG = this;
+                
+                document.getElementById('selected-emotion').value = this.id;
             });
         });
 

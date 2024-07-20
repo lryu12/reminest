@@ -24,6 +24,7 @@ db.connect();
 
 var keyMoments;
 var newGoals;
+var emotion;
 // Serve static files from the "public" directory
 app.use(express.static('public'));
 
@@ -47,17 +48,23 @@ app.get("/past-emotions", (req, res) => {
 app.post("/submit", async (req, res) => {
     keyMoments  = req.body['key-moments'];
     newGoals = req.body['new-goals'];
+    emotion = req.body['selected-emotion'];
 
-    console.log(`Key Moments: ${keyMoments}, New Goals: ${newGoals}`);
+    console.log(`Key Moments: ${keyMoments}, New Goals: ${newGoals}, Emoji: ${emotion}`);
 
-    await db.query(
-        "INSERT INTO daily_log (date, emotion, event) VALUES ($1, $2, $3)",
-        [new Date().toISOString().split('T')[0], "happy-test", keyMoments]
-    );
-
+    try{
+        await db.query(
+            "INSERT INTO daily_log (date, emotion, event) VALUES ($1, $2, $3)",
+            [new Date().toISOString().split('T')[0], emotion, keyMoments]
+        );
+        res.render("goals2achieve.ejs", { submittedData: {newGoals}});
+    } catch(err) {
+        console.log(err);
+        res.redirect("/");
+    }
       
 
-     res.render("goals2achieve.ejs", { submittedData: {newGoals}});
+     
 
 });
 
