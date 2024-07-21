@@ -51,9 +51,22 @@ app.get("/past-emotions", async (req, res) => {
      
 });
 
-app.get("/selected-date", (req, res) => {
+app.get("/selected-date", async (req, res) => {
     const selectedDate = req.query.date;
-    res.render("log-info.ejs", { date: selectedDate});
+
+    try{
+        const result = await db.query("SELECT emotion, event FROM daily_log WHERE date = $1",
+            [selectedDate]
+            
+        );
+        const queryData = result.rows[0];
+        console.log(queryData);
+        res.render("log-info.ejs", { emotion: queryData.emotion, event: queryData.event});
+    } catch(err) {
+        console.log(err);
+        res.redirect("/past-emotions");
+    }
+
 });
 
 
