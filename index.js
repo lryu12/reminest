@@ -39,10 +39,22 @@ app.get("/goals2achieve", (req, res) => {
     res.render("goals2achieve.ejs", { submittedData: { keyMoments, newGoals}});
 });
 
-app.get("/past-emotions", (req, res) => {
-    res.render("past-emotions.ejs");
+app.get("/past-emotions", async (req, res) => {
+     
+    try {
+        const result = await db.query("SELECT date, emotion FROM daily_log");
+        const data  = result.rows
+        res.render("past-emotions.ejs", {data: data });
+    } catch(err) {
+        res.redirect("/");
+    }
+     
 });
 
+app.get("/selected-date", (req, res) => {
+    const selectedDate = req.query.date;
+    res.render("log-info.ejs", { date: selectedDate});
+});
 
 
 app.post("/submit", async (req, res) => {

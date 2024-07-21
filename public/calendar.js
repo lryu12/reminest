@@ -33,6 +33,19 @@ function generateCalendar(year, month) {
         if (year === new Date().getFullYear() && month === new Date().getMonth() && day === new Date().getDate()) {
             dayElement.classList.add('today');
         }
+
+        const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+        dayElement.id = dateStr;
+
+
+        if (year === new Date().getFullYear() && month === new Date().getMonth() && day === new Date().getDate()) {
+        dayElement.classList.add('today');
+        }
+
+        dayElement.addEventListener('click', () => {
+            window.location.href = `/selected-date?date=${dateStr}`;
+        });
+
         calendarContainer.appendChild(dayElement);
     }
 }
@@ -82,3 +95,4 @@ document.querySelector('#next-button').addEventListener("click", () => {
     generateCalendar(currentPageYear, currentPageMonth);
     updateMonthTitle(currentPageYear, currentPageMonth);
 });
+

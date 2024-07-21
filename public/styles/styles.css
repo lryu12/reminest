@@ -177,3 +177,32 @@ li{
     margin-top: 25px;
 }
 
+.log-info{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.log-header{
+    background-color: #1c4966;
+    height: 100px;
+    width: 300px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+
+.emotion-logged{
+    background-color: #74e47a;
+    height: 150px;
+    width: 300px;
+}
+
+.key-moments-logged{
+    background-color: bisque;
+    height: 200px;
+    width: 300px;
+}
